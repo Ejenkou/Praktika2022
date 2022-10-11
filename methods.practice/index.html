@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+</head>
+<body>
+    <form action="methods.php" method="post">
+        <input id="fname" name="fname" type="text" placeholder="Название фильма">
+        <p>Сейчас в кинотеатрах<input type="checkbox" name="inthecinema" value="до сих пор показывают или "></p>
+        <p><input id="tl" name="cinema" type="radio" value=" Apollo Tallin, ">Apollo Tallinn</p>
+        <p><input id="jv" name="cinema" type="radio" value=" Apollo Johvi, ">Apollo Johvi</p>
+        <p><input id="tr" name="cinema" type="radio" value=" Apollo Tartu, ">Apollo Tartu</p>
+        <div>
+            <select name="Zanr">
+                <option id="hr" name="hr" value="Horror">Хоррор</option>
+                <option id="bl" name="bl" value="Blockbuster">Блокбастер</option>
+                <option id="dr" name="dr" value="Dramma">Драма</option>
+                <option id="cm" name="cm" value="Comedy">Комедия</option>
+        </select>
+        </div>
+        <div><textarea name="descript" id="descript" placeholder="Описание фильма"></textarea></div>
+
+        <button type="submit"> Отправить </button>
+    </form>
+    
+</body>
+</html>
