@@ -6,33 +6,33 @@
 </head>
 <body>
     <form action="methods.php" method="post">
-        <input id="fname" name="fname" type="file" placeholder="Название фильма">
-        <input id="fname" name="fname" type="text" placeholder="Название фильма">
+        <input id="images" name="image" type="file" accept=".jpg,.png" placeholder="картинка">
+        <div><input id="fname" name="fname" required type="text" placeholder="Название фильма">*</div>
         <p>Сейчас в кинотеатрах<input type="checkbox" name="inthecinema" value="до сих пор показывают или "></p>
         <p><input id="tl" name="cinema" type="radio" value=" Apollo Tallin, ">Apollo Tallinn</p>
         <p><input id="jv" name="cinema" type="radio" value=" Apollo Johvi, ">Apollo Johvi</p>
         <p><input id="tr" name="cinema" type="radio" value=" Apollo Tartu, ">Apollo Tartu</p>
         <div>
             <select name="Zanr">
-                <option id="hr" name="hr" value="Horror">Хоррор</option>
-                <option id="bl" name="bl" value="Blockbuster">Блокбастер</option>
-                <option id="dr" name="dr" value="Dramma">Драма</option>
-                <option id="cm" name="cm" value="Comedy">Комедия</option>
+                <option id="hr" name="hr" value=" снимали в жанре Horror ">Хоррор</option>
+                <option id="bl" name="bl" value=" снимали в жанре Blockbuster ">Блокбастер</option>
+                <option id="dr" name="dr" value=" снимали в жанре Dramma ">Драма</option>
+                <option id="cm" name="cm" value=" снимали в жанре Comedy">Комедия</option>
         </select>
         </div>
         <div><p>Рейтинг: </p>
-            <p><input id="G" name="rating" type="radio" value=" G, ">G</p>
-            <p><input id="PG" name="rating" type="radio" value=" PG ">PG</p>
-            <p><input id="PG-13" name="rating" type="radio" value=" PG-13 ">PG-13</p>
-            <p><input id="R" name="rating" type="radio" value=" R ">R</p>   
+            <p><input id="G" name="rating" type="radio" value=" с рейтингом G ">G</p>
+            <p><input id="PG" name="rating" type="radio" value=" с рейтингом PG ">PG</p>
+            <p><input id="PG-13" name="rating" type="radio" value=" с рейтингом PG-13 ">PG-13</p>
+            <p><input id="R" name="rating" type="radio" value=" с рейтингом R ">R</p>   
         </div>
         <div>
-            <p><input id="money" name="money" type="number" placeholder="Кассовые сборы"></p>
+            <p><input id="money" name="money" type="number" placeholder="Кассовые сборы" value="0"></p>
         </div>
         <div>
-            <p><input id="views" name="views" type="number" placeholder="Количество поситивших"></p>
+            <p><input id="views" name="views" type="number" placeholder="Количество посетивших" value="0"></p>
         </div>
-        <div><textarea name="descript" id="descript" placeholder="Описание фильма"></textarea></div>
+        <div><textarea name="descript" required id="descript" placeholder="Описание фильма"></textarea>*</div>
 
         <button type="submit"> Отправить </button>
     </form>
