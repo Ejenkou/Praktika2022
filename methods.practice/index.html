@@ -7,20 +7,23 @@
 <body>
     <form action="methods.php" method="post" enctype="multipart/form-data">
         <div>
-            <input id="posterimage" name="image" type="file" accept=".jpg,.png">
+            <p>Постер фильма*: <label><input id="posterimage" name="image" required type="file" accept=".jpg,.png"></label></p>
         </div>
         <div>
-            <input id="fname" name="fname" required type="text" placeholder="Название фильма*">
+            <label><input id="fname" name="fname" required type="text" placeholder="Название фильма*"></label>
         </div>
         <div>
-            <p>Сейчас в кинотеатрах<input type="checkbox" name="inthecinema" value="до сих пор показывают или "></p>
+            <p>Сейчас в кинотеатрах?<input type="checkbox" name="inthecinema" value="до сих пор показывают или "></p>
+        </div>
+            
+        <div>
+            <p>Где показывают:</p>
+            <p><input id="tl" name="cinema1" type="checkbox" value=" Apollo Tallin, ">Apollo Tallinn</p>
+            <p><input id="jv" name="cinema2" type="checkbox" value=" Apollo Johvi, ">Apollo Johvi</p>
+            <p><input id="tr" name="cinema3" type="checkbox" value=" Apollo Tartu, ">Apollo Tartu</p>
         </div>
         <div>
-            <p><input id="tl" name="cinema" type="radio" value=" Apollo Tallin, ">Apollo Tallinn</p>
-            <p><input id="jv" name="cinema" type="radio" value=" Apollo Johvi, ">Apollo Johvi</p>
-            <p><input id="tr" name="cinema" type="radio" value=" Apollo Tartu, ">Apollo Tartu</p>
-        </div>
-        <div>
+            <p>Жанр фильма:</p>
             <select name="Zanr">
                 <option id="hr" name="hr" value=" снимали в жанре Horror ">Хоррор</option>
                 <option id="bl" name="bl" value=" снимали в жанре Blockbuster ">Блокбастер</option>
@@ -41,7 +44,9 @@
         <div>
             <p>Количество посетивших: <input id="views" name="views" type="number" value="0"></p>
         </div>
-        <div><textarea name="descript" required id="descript" placeholder="Описание фильма*"></textarea></div>
+        <div>
+            <label><textarea name="descript" required id="descript" placeholder="Описание фильма*"></textarea></label>
+        </div>
 
         <button type="submit"> Отправить </button>
     </form>
