@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="methods.css">
     <title>Registration Form</title>
 </head>
-<body>
-    <div class="center form-switch">
+<body style="background-image: url('./images/film.jpg'); background-size: 100%;">
+    <div class="center form-switch border border-dark" style="background-color: white;">
         <form action="methods.php" method="post" enctype="multipart/form-data">
             <div class="line">
                 <p>Постер фильма*:</p> <label><input class="form-control justify-content-center" id="posterimage" name="image" required type="file" accept=".jpg,.png"></label>
@@ -24,7 +24,7 @@
             <div class="line">
                 <p>Где показывают:</p>
                 <label class="margins"><input id="tl" name="cinema1" type="checkbox" class="form-check-input" value=" Apollo Tallin, ">Apollo Tallinn</label>
-                <label class="margins"><<input id="jv" name="cinema2" type="checkbox" class="form-check-input" value=" Apollo Johvi, ">Apollo Johvi</label>
+                <label class="margins"><input id="jv" name="cinema2" type="checkbox" class="form-check-input" value=" Apollo Johvi, ">Apollo Johvi</label>
                 <label class="margins"><input id="tr" name="cinema3" type="checkbox" class="form-check-input" value=" Apollo Tartu, ">Apollo Tartu</label>
             </div>
             <br>
@@ -59,7 +59,7 @@
             </div>
             <br>
             <div>
-            <button  type="submit" class="btn btn-primary"> Отправить </button>
+            <button  type="submit" class="btn btn btn-dark"> Отправить </button>
             </div>
         </form>
     </div>

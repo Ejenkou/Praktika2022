@@ -1,31 +1,33 @@
+
 .center {
     margin: auto;
     width: 50%;
     padding: 30px;
     text-align: center;
-  }
+}
   
-  .textarea {
+.textarea {
     width: 565px;
     height: auto;
-  }
+}
 
-  .margins {
+.margins {
     margin-inline: 2.5em;
-  }
+}
 
-  .margins2 {
+.margins2 {
     margin-inline: 1.75em;
-  }
+}
 
-  .textincenter {
+.textincenter {
     text-align: center;
-  }
+}
 
-  .line {
+.line {
     padding: 10px;
     border-bottom: 1px solid black;
-  }
+}
+
 
 
 
