@@ -7,55 +7,66 @@
     <title>Registration Form</title>
 </head>
 <body style="background-image: url('./images/film.jpg'); background-size: 100%;">
-    <div class="center form-switch border border-dark" style="background-color: white;">
+    <div class="center border border-dark" style="background-color: white;">
         <form action="methods.php" method="post" enctype="multipart/form-data">
-            <div class="line">
-                <p>Постер фильма*:</p> <label><input class="form-control justify-content-center" id="posterimage" name="image" required type="file" accept=".jpg,.png"></label>
-            </div>
-            <br>
+            <div class="alert alert-primary d-flex align-items-center" role="alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                </svg>
+                <div>
+                  Заполните все необходимые поля, обозначенные символом "*"
+                </div>
+              </div>
             <div>
-                <label><input id="fname" class="form-control" name="fname" required type="text" placeholder="Название фильма*"></label>
+                <p>Постер фильма*:</p> <label><input class="form-control" id="posterimage" name="image" required type="file" accept=".jpg,.png"></label>
             </div>
             <br>
-            <div class="line">
+            <div  class="col-sm">
+                <p>Название фильма*:</p>
+                <input id="fname" class="form-control text-center" name="fname" required type="text">
+            </div>
+            <br>
+            <div class="form-switch">
                 <p>Сейчас в кинотеатрах?</p><input type="checkbox" class="form-check-input" name="inthecinema" value="до сих пор показывают или ">
             </div>
             <br>    
-            <div class="line">
+            <div>
                 <p>Где показывают:</p>
-                <label class="margins"><input id="tl" name="cinema1" type="checkbox" class="form-check-input" value=" Apollo Tallin, ">Apollo Tallinn</label>
-                <label class="margins"><input id="jv" name="cinema2" type="checkbox" class="form-check-input" value=" Apollo Johvi, ">Apollo Johvi</label>
-                <label class="margins"><input id="tr" name="cinema3" type="checkbox" class="form-check-input" value=" Apollo Tartu, ">Apollo Tartu</label>
+                <label><input id="tl" name="cinema1" type="checkbox" class="form-check-input" value=" Apollo Tallin, ">Apollo Tallinn</label>
+                <label><input id="jv" name="cinema2" type="checkbox" class="form-check-input" value=" Apollo Johvi, ">Apollo Johvi</label>
+                <label><input id="tr" name="cinema3" type="checkbox" class="form-check-input" value=" Apollo Tartu, ">Apollo Tartu</label>
             </div>
             <br>
-            <div>
-                Жанр фильма:
-                <select class="form-select textincenter" name="Zanr">
+            <div  class="col-sm">
+                <p>Жанр фильма:</p>
+                <label><select class="form-select text-center" name="Zanr">
                     <option id="hr" name="hr" value=" снимали в жанре Horror ">Хоррор</option>
                     <option id="bl" name="bl" value=" снимали в жанре Blockbuster ">Блокбастер</option>
                     <option id="dr" name="dr" value=" снимали в жанре Dramma ">Драма</option>
                     <option id="cm" name="cm" value=" снимали в жанре Comedy">Комедия</option>
-            </select>
+                </select>
+                </label>
             </div>
             <br>
-            <div class="line">
+            <div>
                 <p>Рейтинг:</p>
-                <label class="margins2"><input class="form-check-input" id="G" name="rating" type="radio" value=" с рейтингом G ">G</label>
-                <label class="margins2"><input class="form-check-input" id="PG" name="rating" type="radio" value=" с рейтингом PG ">PG</label>
-                <label class="margins2"><input class="form-check-input" id="PG-13" name="rating" type="radio" value=" с рейтингом PG-13 ">PG-13</label>
-                <label class="margins2"><input class="form-check-input" id="R" name="rating" type="radio" value=" с рейтингом R ">R  </label>
+                <label><input class="form-check-input" id="G" name="rating" type="radio" value=" с рейтингом G ">G</label>
+                <label><input class="form-check-input" id="PG" name="rating" type="radio" value=" с рейтингом PG ">PG</label>
+                <label><input class="form-check-input" id="PG-13" name="rating" type="radio" value=" с рейтингом PG-13 ">PG-13</label>
+                <label><input class="form-check-input" id="R" name="rating" type="radio" value=" с рейтингом R ">R  </label>
+            </div>
+            <br>
+            <div  class="col-sm">
+                <label>Кассовые сборы: <input class="form-control text-center" id="money" name="money" type="number" value="0"></label>
+            </div>
+            <br>
+            <div  class="col-sm">
+                <label>Количество посетивших: <input class="form-control text-center" id="views" name="views" type="number" value="0"></label>
             </div>
             <br>
             <div>
-                Кассовые сборы: <input class="form-control textincenter" id="money" name="money" type="number" value="0">
-            </div>
-            <br>
-            <div>
-                Количество посетивших: <input class="form-control textincenter" id="views" name="views" type="number" value="0">
-            </div>
-            <br>
-            <div class="line">
-                <label><textarea class="form-control textarea textincenter" name="descript" required id="descript" placeholder="Описание фильма*"></textarea></label>
+                <p>Описание фильма*:</p>
+                <textarea class="form-control text-center" name="descript" required id="descript"></textarea>
             </div>
             <br>
             <div>
