@@ -7,37 +7,61 @@
     <title>Registration Form</title>
 </head>
 <body style="background-image: url('./images/film.jpg'); background-size: 100%;">
+    <!-- block -->
     <div class="center border border-dark" style="background-color: white;">
         <form action="methods.php" method="post" enctype="multipart/form-data">
             <div class="alert alert-primary d-flex align-items-center" role="alert">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
                   <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
                 </svg>
+
+                <!-- alert -->
+
                 <div>
                   Заполните все необходимые поля, обозначенные символом "*"
                 </div>
               </div>
-            <div>
+
+            <!-- column1 -->
+
+            <div class="row">
+            <div class="col">
+
+            <!-- input with choosing file:  jpg/png  -->  
+
+            <div class="mb-3 col-12 col-md-auto">
                 <p>Постер фильма*:</p> <label><input class="form-control" id="posterimage" name="image" required type="file" accept=".jpg,.png"></label>
             </div>
             <br>
-            <div  class="col-sm">
+
+            <!--input with film name-->
+
+            <div class="mb-3 col-12 col-md-auto">
                 <p>Название фильма*:</p>
                 <input id="fname" class="form-control text-center" name="fname" required type="text">
             </div>
             <br>
-            <div class="form-switch">
+
+            <!-- chekbox: is film still on cinema -->
+
+            <div class="form-switch mb-3 col-12 col-md-auto">
                 <p>Сейчас в кинотеатрах?</p><input type="checkbox" class="form-check-input" name="inthecinema" value="до сих пор показывают или ">
             </div>
-            <br>    
-            <div>
+            <br>
+            
+             <!-- checkboxes: where is film shown -->
+
+            <div class="mb-3 col-12 col-md-auto">
                 <p>Где показывают:</p>
                 <label><input id="tl" name="cinema1" type="checkbox" class="form-check-input" value=" Apollo Tallin, ">Apollo Tallinn</label>
                 <label><input id="jv" name="cinema2" type="checkbox" class="form-check-input" value=" Apollo Johvi, ">Apollo Johvi</label>
                 <label><input id="tr" name="cinema3" type="checkbox" class="form-check-input" value=" Apollo Tartu, ">Apollo Tartu</label>
             </div>
             <br>
-            <div  class="col-sm">
+
+             <!-- selection: film genre -->
+
+            <div class="mb-3 col-12 col-md-auto">
                 <p>Жанр фильма:</p>
                 <label><select class="form-select text-center" name="Zanr">
                     <option id="hr" name="hr" value=" снимали в жанре Horror ">Хоррор</option>
@@ -47,8 +71,16 @@
                 </select>
                 </label>
             </div>
+        </div>
+
+         <!-- column2 -->
+         
+        <div class="col">
             <br>
-            <div>
+
+             <!-- radio: film rating-->
+
+            <div class="mb-3 col-12 col-md-auto">
                 <p>Рейтинг:</p>
                 <label><input class="form-check-input" id="G" name="rating" type="radio" value=" с рейтингом G ">G</label>
                 <label><input class="form-check-input" id="PG" name="rating" type="radio" value=" с рейтингом PG ">PG</label>
@@ -56,23 +88,34 @@
                 <label><input class="form-check-input" id="R" name="rating" type="radio" value=" с рейтингом R ">R  </label>
             </div>
             <br>
-            <div  class="col-sm">
+
+             <!-- input with number type-->
+             
+            <div class="mb-3 col-12 col-md-auto">
                 <label>Кассовые сборы: <input class="form-control text-center" id="money" name="money" type="number" value="0"></label>
             </div>
             <br>
-            <div  class="col-sm">
+            <div class="mb-3 col-12 col-md-auto">
                 <label>Количество посетивших: <input class="form-control text-center" id="views" name="views" type="number" value="0"></label>
             </div>
             <br>
-            <div>
+
+             <!-- input with textarea: film description-->
+
+            <div class="mb-3 col-12 col-md-auto">
                 <p>Описание фильма*:</p>
                 <textarea class="form-control text-center" name="descript" required id="descript"></textarea>
             </div>
             <br>
-            <div>
+
+             <!-- button with submit -->
+
+            <div class="mb-3 col-12 col-md-auto">
             <button  type="submit" class="btn btn btn-dark"> Отправить </button>
             </div>
+        </div>
         </form>
+    </div>
     </div>
     </body>
     </html>
